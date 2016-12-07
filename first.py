@@ -11,7 +11,12 @@
 #for element in mp:
 #	print str(element) + "-->" + str(mp.get(element))
 
-	
+mp ={1 : "number one", 2 : "number 2", 3 : "number three"}
+
+def find(key):
+	return mp.get(key)
+
+
 while True:
 	op = raw_input("Do you want to enter a number?: (Yes or No)\n")
 	op = op.lower()
@@ -20,6 +25,10 @@ while True:
 		exit()
 	elif op == "yes":
 		number = raw_input("Enter some number: ")
-		print "You entered " + str(number)
+		name = find(int(number))
+		if name is not None:
+			print "You entered " + str(number) + " and its name " + name
+		else:
+			print "I don't know the name for " + str(number)
 	else:
 		print "ERROR!?"
