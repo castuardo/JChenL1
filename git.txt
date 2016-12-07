@@ -1,0 +1,9 @@
+# when you to clone
+git clone <address>
+# when you create a new file
+git add <file>
+# when you update a file
+git commit -a -m "<your message>"
+git push origin master
+# when you want to check the updates
+git pull origin master
